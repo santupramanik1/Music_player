@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="data:," type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- Card Start -->
+    <div class="card-container w-full h-screen flex items-center justify-center">
+        <div class="card w-72 h-auto border rounded-lg bg-white shadow-lg flex flex-col items-center">
+            <h3 class="text-black text-lg font-bold pt-5" id="song-name"></h3>
+            <h3 class="pt-2" id="artist"></h3>
+            <div class="pt-5" id="album-image">
+                <img src="" alt="" class="rounded-full  w-52 h-52 p-5" id="image-id">
+            </div>
+
+            <!-- Progress Bar Start -->
+            <div class="progress-bar w-full">
+                <div class="time flex gap-x-40 w-full justify-center">
+                    <div class="initial-time" id="initial-time">0:00</div>
+                    <div class="total-duration" id="total-duration">5:50</div>
+                </div>
+                <div class="progress-container  h-2 border mr-5 ml-5  mt-5 rounded-md" id="progress-container">
+                    <div class="bar w-width bg-black h-2 rounded-md" id="progress-value"></div>
+                </div>
+            </div>
+            <!-- Progress Bar End -->
+
+            <!-- Mute Start -->
+            <div class="mute-status flex justify-end w-full mr-10 pt-5">
+                <i class="fa-solid fa-volume-off" id="mute-unmute"></i>
+            </div>
+            <!-- Mute Start -->
+
+            <!-- Sound Control start -->
+            <div class="volume-control w-full pl-5  pr-5">
+                <input type="range" min="0" max="100" value="100" class="w-full bg-cyan-600" id="volumeChanger">
+            </div>
+            <!-- Sound Control start -->
+
+            <!-- Control start -->
+            <div class="all-btn flex  gap-12 pb-5 pt-5">
+                <div
+                    class="hover:rounded-full hover:bg-black hover:text-white flex items-center justify-center w-10 h-10   duration-150  hover:cursor-pointer">
+                    <i class="fa-solid fa-backward " id="previous-btn"></i>
+                </div>
+                <div
+                    class="hover:rounded-full hover:bg-black hover:text-white flex items-center justify-center w-10 h-10   duration-150  hover:cursor-pointer">
+                    <i class="fa-solid fa-play" id="pause-btn"></i>
+                </div>
+                <div
+                    class="hover:rounded-full hover:bg-black hover:text-white flex items-center justify-center w-10 h-10   duration-150 hover:cursor-pointer ">
+                    <i class="fa-solid fa-forward" id="next-btn"></i>
+                </div>
+            </div>
+            <!-- Control start -->
+
+        </div>
+    </div>
+    <!-- Card End -->
+
+    <audio src="" controls id="audio" class="hidden"> </audio>
+    <script src="index.js"></script>
+</body>
+
+</html>
